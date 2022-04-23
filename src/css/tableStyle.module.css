@@ -1,0 +1,40 @@
+/* .styleTable{
+     width: 100%;
+     padding: 80px 400px;
+    background-color: #f3f3f3;
+    border: 2px solid rgb(247, 243, 243);
+    box-shadow: 3px 3px 3px #888888;
+        height: 600px;
+        overflow: scroll
+
+} */
+
+
+table tbody, table thead
+{
+    display: block;
+    margin: 10px 400px;
+    width: 700px;
+}
+
+table tbody 
+{
+   overflow: auto;
+   height: 200px;
+   width: 700px;
+}
+
+table {
+    width: 350px; /* can be dynamic */
+    padding-bottom: 50px;
+}
+
+th
+{
+    width: 500px;
+}
+
+td
+{
+    width: 500px;
+}
