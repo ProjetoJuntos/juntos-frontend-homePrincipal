@@ -1,9 +1,8 @@
 import React from 'react';
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+// import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import style from '../../css/tableStyle.module.css';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 class TableHomePr extends React.Component {
 

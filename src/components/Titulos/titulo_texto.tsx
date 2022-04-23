@@ -5,19 +5,21 @@ class Titulo_texto extends React.Component {
 
     render() {
         return (
-            <div style={{
-                marginTop: '100px',
-                textAlign: 'center'
+            <div id='doacoes' style={{
+                marginTop: '80px',
+                textAlign: 'center',
+                fontFamily: 'Cagliostro'
+                
             }}>
                 <div>
-                    <h1>Doações Disponíveis</h1>
+                    <h1 id='tituloDoacao'>Doações Disponíveis</h1>
                 </div>
                 <div>
                     <hr style={{
-                        margin: '20px 520px',
-                        marginBottom: '40px',
+                        margin: '35px 520px',
+                        marginBottom: '50px',
                         width: '300px',
-                        borderTop: '4px solid #AECFDF'
+                        borderTop: '4px solid #AECFDF',
                     }}></hr>
                 </div>
             </div>

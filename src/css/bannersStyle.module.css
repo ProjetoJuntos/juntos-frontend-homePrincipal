@@ -1,8 +1,28 @@
 img{
 	width: 100%;
-	margin-top: 80px;
+	/* margin-top: 30px; */
 }
 
 h1{
-
+	/* font-size: 100pt; */
 }
+
+.tituloBanner2{
+	font-size: 150pt;
+	font-family: 'Amatic SC', cursive;
+	position: absolute;
+	left: 400px;
+	top: 1455px;
+	color: rgb(255, 255, 255);
+}
+
+.divBanner2{ 
+	display: inline-block;
+	position: relative;	
+}
+
+
+/* .imgBanner2{ */
+	/* float: left; */
+
+/* } */
