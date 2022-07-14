@@ -3,6 +3,7 @@ div.styleTable{
     border: 2px solid rgb(247, 243, 243);
     box-shadow: 3px 3px 3px #e2dfdf;
     height: 550px; 
+    padding-left: 150px;
 }
 
 
@@ -17,7 +18,7 @@ table tbody
 {
    overflow: auto;
    height: 350px; /* tamanho tabela(altura) */
-   width: 50%; /* tamanho tabela(largura) */
+   width: 30%; /* tamanho tabela(largura) */
 }
 
 table {
@@ -27,7 +28,7 @@ table {
 
 th  /*cabeçalho(titulos) */
 {
-    width: 39%;
+    width:55%;
 }
 
 td /*colunas abaixo do cabeçaçho(tabela) */
