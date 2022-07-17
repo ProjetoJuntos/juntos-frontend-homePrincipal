@@ -5,58 +5,83 @@ import style from '../../css/tableStyle.module.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup'
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import style1 from '../../css/pesquisacepStyle.module.css';
 import api from '../../services/Api';
+import Table from 'react-bootstrap/Table';
+// import { threadId } from 'worker_threads';
 // import Data from '../../mock-data-doacoes.json'
 
 class TableHomePr extends React.Component {
-    state={
-        cep: '',
-        filmes: [],
-    }
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+            filmes: [],
+            busca: ''
+        };
+      }
 
     async componentDidMount(){
         const res = await api('');
-        console.log(res.data);
         this.setState({filmes: res.data});
-    }
-    
+    } 
+
     render() {
+        const divStyle = {
+            overflow: 'auto',
+            width: '55%', 
+            height: '250px',
+            marginLeft:'330px',
+            marginBottom: '50px'
+          };
+        const {filmes} = this.state;
+        // const [busca, setBusca] = useState({busca: this.state.busca});
+        // const filmesBusca = filmes
+        // .filter((filme) => filme.starstsWith(busca));
         return (
+        
         <div>
+            {console.log(filmes)}
+
             <div className={style1.pesquisacep}>
+                
                 <InputGroup>
                     <Form.Control 
                     id="cep"
-                    value={this.state.value}
-                    placeholder="Procurar doações por CEP" 
-                    onChange={this.handleChange}
+                    value={busca}
+                    placeholder="  Digite o CEP para achar doações" 
+                    onChange={(ev) => setBusca(ev.target.value)}
                     />
-                    <Button type="submit" 
+                    {/* <Button type="submit" 
                     variant="outline-info" 
-                    // onClick={this.buscar} 
+                    onClick={this.buscar} 
                     id="button-addon2">
                     Buscar
-                    </Button>
+                    </Button> */}
                 </InputGroup>
             </div>
             
-            <div className={style.styleTable}>
-        
-                <table className='table table-hover'>
+            {/* <div className={style.styleTable} > */}
+            <div style={divStyle}> 
+                <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
                             <th>Doação</th>
                             <th>Bairro de destino</th>
+                            <th>CEP</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {/* {
-                        this.state.data.map(this.renderRows)
-                        } */}
+                    {filmes.map(filme => (
+                        <tr key={filme.show.id}>
+                            <td> {filme.show.name}</td>
+                            <td>{filme.show.type}</td>
+                            <td>{filme.show.language}</td>
+                        </tr>
+                        ))}
                     </tbody>
-                </table>
+                </Table>          
             </div>
         </div>
         );
