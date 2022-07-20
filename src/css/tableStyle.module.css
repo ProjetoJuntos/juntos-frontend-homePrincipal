@@ -1,37 +1,43 @@
-div.styleTable{
+/* div.styleTable{
     background-color: #f3f3f3;
     border: 2px solid rgb(247, 243, 243);
     box-shadow: 3px 3px 3px #e2dfdf;
     height: 550px; 
-}
+    padding-left: 150px;
+    width: 100%;
+} */
 
 
-table tbody, table thead
-{
-    display: block;
-    margin: 10px 350px;
+/* table tbody, table thead */
+/* { */
+    /* display: block; */
+    /* margin: 10px 350px; */
+    /* width: 80%; */
+/* }  */
+
+/* table tbody  */
+/* { */
+   /* overflow: auto; */
+    /* tamanho tabela(altura) */
+   /* height: 300px; */
+   /* tamanho tabela(largura) */
+   /* width: 80%;  */
+/* } */
+
+/* table {
     width: 50%;
-}
+} */
 
-table tbody 
+/*cabeçalho(titulos) */
+/* th  
 {
-   overflow: auto;
-   height: 350px; /* tamanho tabela(altura) */
-   width: 50%; /* tamanho tabela(largura) */
-}
+    width:48%;
+} */
 
-table {
-    /* width: 50%; */
-    /* padding-bottom: 10px; */
-}
 
-th  /*cabeçalho(titulos) */
+/*colunas abaixo do cabeçaçho(tabela) */
+/* td 
 {
-    width: 39%;
-}
-
-td /*colunas abaixo do cabeçaçho(tabela) */
-{
-    width: 45%;
-} 
+    width: 46.5%;
+}  */
 
