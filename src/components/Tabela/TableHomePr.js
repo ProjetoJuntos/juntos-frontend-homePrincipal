@@ -23,7 +23,7 @@ class TableHomePr extends React.Component {
       }
 
     async componentDidMount(){
-        const res = await api('doadores');
+        const res = await api('doacoes');
         this.setState({doacoes: res.data});
     } 
 
@@ -44,23 +44,17 @@ class TableHomePr extends React.Component {
         <div>
             {console.log(doacoes)}
 
-            <div className={style1.pesquisacep}>
+            {/* <div className={style1.pesquisacep}>
                 
                 <InputGroup>
                     <Form.Control 
                     id="cep"
-               //     value={busca}
+                   value={busca}
                     placeholder="  Digite o CEP para achar doações" 
-                //    onChange={(ev) => setBusca(ev.target.value)}
+                   onChange={(ev) => setBusca(ev.target.value)}
                     />
-                    {/* <Button type="submit" 
-                    variant="outline-info" 
-                    onClick={this.buscar} 
-                    id="button-addon2">
-                    Buscar
-                    </Button> */}
                 </InputGroup>
-            </div>
+            </div> */}
             
             {/* <div className={style.styleTable} > */}
             <div style={divStyle}> 
@@ -68,15 +62,15 @@ class TableHomePr extends React.Component {
                     <thead>
                         <tr>
                             <th>Doação</th>
-                            <th>Bairro de destino</th>
+                            <th>Descrição</th>
                             <th>CEP</th>
                         </tr>
                     </thead>
                     <tbody>
                     {doacoes.map(doacao => (
                         <tr key={doacao.id}>
-                            <td> {doacao.nome}</td>
-                            <td>{doacao.cidade}</td>
+                            <td> {doacao.tipo}</td>
+                            <td>{doacao.descricao}</td>
                             <td>{doacao.CEP}</td>
                         </tr>
                         ))}
