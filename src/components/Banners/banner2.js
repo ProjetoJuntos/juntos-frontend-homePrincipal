@@ -11,7 +11,7 @@ class Banner2 extends React.Component {
 		return (
 			<div className='divBanner2'>
 				<div className='imgBanner2'>
-					<img className={style.bannerStyle} src={banner2} alt='banner2' />
+					<img id='ranking' className={style.bannerStyle} src={banner2} alt='banner2' />
 					<h1 className={style.tituloBanner2}>Ranking</h1>
 					<img src={linha_banner2} alt='linhaBanner2' />
 					{/* <Player
