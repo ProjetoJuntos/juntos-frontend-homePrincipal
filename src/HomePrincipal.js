@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HomePublica from './components/HomePublica/homePublica';
-import LoginPage from './components/Login/login';
+import Rotas from './routes';
 // import Menu from './components/Menu';
 // import BannerPr from './components/Banners/bannerPr';
 // import Hr_divisao from './components/Linhas/hr_divisao';
@@ -12,7 +12,7 @@ import LoginPage from './components/Login/login';
 function HomePrincipal() {
   return (
     <div className="App">
-      <HomePublica/>
+      <Rotas />
     </div>
   );
 }

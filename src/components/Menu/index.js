@@ -21,7 +21,7 @@ class Menu extends React.Component {
                         <Nav.Link className="px-md-5" href="#doacoes">DOAÇÕES</Nav.Link>
                         <Nav.Link className="px-md-5" href="#ranking">RANKING</Nav.Link>
                         <Nav.Link className="px-md-5" href="#quemSomos">QUEM SOMOS</Nav.Link>
-                        <Nav.Link className="px-md-5" href="#login">LOGIN</Nav.Link>
+                        <Nav.Link className="px-md-5" href="login">LOGIN</Nav.Link>
                         {/* <Nav.Link className="px-md-5" to="/login" onClick={LoginService.login} href="#login">LOGIN</Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
