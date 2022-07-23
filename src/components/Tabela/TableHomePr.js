@@ -1,16 +1,11 @@
 import React, {useState} from 'react';
-// import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import style from '../../css/tableStyle.module.css';
-// import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup'
-// import Button from 'react-bootstrap/Button';
 import style1 from '../../css/pesquisacepStyle.module.css';
 import api from '../../services/Api';
 import Table from 'react-bootstrap/Table';
-// import { threadId } from 'worker_threads';
-// import Data from '../../mock-data-doacoes.json'
+
 
 class TableHomePr extends React.Component {
     constructor(props) {
@@ -18,6 +13,7 @@ class TableHomePr extends React.Component {
     
         this.state = {
             doacoes: [],
+            doacoesFilter: [],
             busca: ''
         };
       }
@@ -25,7 +21,19 @@ class TableHomePr extends React.Component {
     async componentDidMount(){
         const res = await api('doacoes');
         this.setState({doacoes: res.data});
+        this.setState({doacoesFilter: res.data});
     } 
+
+    arrayFilter(arg){
+        const newArray = this.state.doacoes.filter(cep => cep.CEP.indexOf(arg) > -1)
+        if(arg.length > 0){
+            this.setState({doacoesFilter: newArray});
+        }else{
+            
+            this.setState({doacoesFilter: this.state.doacoes});
+        }
+        console.log("newArray AQUI", newArray, "Arg", arg, arg.length)
+    }
 
     render() {
         const divStyle = {
@@ -36,25 +44,22 @@ class TableHomePr extends React.Component {
             marginBottom: '50px'
           };
         const {doacoes} = this.state;
-        // const [busca, setBusca] = useState({busca: this.state.busca});
-        // const filmesBusca = filmes
-        // .filter((filme) => filme.starstsWith(busca));
+        const {doacoesFilter} = this.state;
         return (
         
         <div>
-            {console.log(doacoes)}
+            {/* {console.log(doacoes)} */}
 
-            {/* <div className={style1.pesquisacep}>
+            <div className={style1.pesquisacep}>
                 
                 <InputGroup>
                     <Form.Control 
                     id="cep"
-                   value={busca}
                     placeholder="  Digite o CEP para achar doações" 
-                   onChange={(ev) => setBusca(ev.target.value)}
+                    onChange={(ev) => this.arrayFilter(ev.target.value)}
                     />
                 </InputGroup>
-            </div> */}
+            </div>
             
             {/* <div className={style.styleTable} > */}
             <div style={divStyle}> 
@@ -67,7 +72,7 @@ class TableHomePr extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {doacoes.map(doacao => (
+                    {doacoesFilter.map(doacao => (
                         <tr key={doacao.id}>
                             <td> {doacao.tipo}</td>
                             <td>{doacao.descricao}</td>
