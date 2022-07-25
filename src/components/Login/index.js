@@ -3,6 +3,7 @@ import { useState } from 'react';
 import juntos_logo from '../../img/juntos_logo.png';
 import style from '../../css/loginStyle.module.css';
 import authService from "../../services/auth.service";
+import { Navigate } from "react-router-dom";
 
 class Login extends React.Component{
 
@@ -10,7 +11,8 @@ class Login extends React.Component{
     super(props)
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      redirectTo: null
     }
   }
 
@@ -20,10 +22,12 @@ class Login extends React.Component{
       email: this.state.email,
       password: this.state.password
     }
+    console.log("data", data)
     try {
       let res = await authService.authenticate(data)
       console.log("res", res.data)
       authService.setLoggedUser(res.data)
+      this.setState({ redirectTo: "/" })
     } catch (error) {
       console.log("error", error)
       alert("Email ou senha incorretos")
@@ -31,6 +35,9 @@ class Login extends React.Component{
   }
 
   render() {
+    if (this.state.redirectTo) {
+      return <Navigate to={this.state.redirectTo} />
+    }
     return (
       <div id='login'>
       <div className={style.container}>
