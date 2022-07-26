@@ -13,39 +13,46 @@ class Ranking extends React.Component{
       }
 
       async componentDidMount(){
-        const res = await api('/entregadores/ranking');
+        const res = await api('/doadores/ranking');
         this.setState({ranks: res.data});
     } 
 
     render(){
         const divStyle = {
-            marginTop: '80px',
+            marginTop: '70px',
             overflow: 'auto',
-            width: '55%', 
+            width: '30%', 
             height: '250px',
-            marginLeft:'330px',
-            marginBottom: '50px'
+            marginBottom: '50px',
+            marginLeft:'450px',
           };
+          const divStyleBack = {
+              backgroundColor: '#F0FFF0',
+              height: '390px',
+              paddingTop: '1px'
+          }
           const {ranks} = this.state;
         return(
-            <div style={divStyle}>
+            <div style={divStyleBack}>
                 
-
-                <Table striped bordered hover variant="dark">
-                    <thead>
-                        <tr>
-                        <th>Nome</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {ranks.map(rank => (
-                        <tr key={rank.id}>
-                        <td>{rank.nome}</td>
-                        </tr>
-                    ))}
-                    </tbody>
+                <div style={divStyle}>
+                    <Table striped="columns" bordered hover variant="dark">
+                        <thead>
+                            <tr>
+                            <th>Quantidade</th>
+                            <th>Nome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {ranks.map(rank => (
+                            <tr key={rank.id}>
+                            <td>{rank.qtd}</td>
+                            <td>{rank.nome}</td>
+                            </tr>
+                        ))}
+                        </tbody>
                     </Table>
-               
+                </div>
             </div>
         );
     }

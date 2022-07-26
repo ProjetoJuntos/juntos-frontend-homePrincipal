@@ -45,10 +45,12 @@ class TableHomePr extends React.Component {
           };
         const {doacoes} = this.state;
         const {doacoesFilter} = this.state;
+
+        console.log("Array doações", doacoes)
         return (
-        
+            
         <div>
-            {/* {console.log(doacoes)} */}
+     
 
             <div className={style1.pesquisacep}>
                 
@@ -75,7 +77,7 @@ class TableHomePr extends React.Component {
                     {doacoesFilter.map(doacao => (
                         <tr key={doacao.id}>
                             <td> {doacao.tipo}</td>
-                            <td>{doacao.descricao}</td>
+                            <td>{doacao.desc}</td>
                             <td>{doacao.CEP}</td>
                         </tr>
                         ))}
