@@ -21,25 +21,21 @@ class banner3Somos extends React.Component{
                 <div>
                     {/* <img src={quemSomos}></img> */}
                     <p className={style.fontQuemSomos}>
-                    Lorem ipsum dolor sit amet. Quo quis voluptatem sed <br></br>
-                    consequatur officiis ut corporis rerum et accusantium <br></br>
-                    animi qui quisquam sequi qui aliquam dolorem. <br></br>
-                    Qui aspernatur error in mollitia libero sed perspiciatis <br></br>
-                    quam quo explicabo amet. Et corporis voluptas sed inventore <br></br>
-                    consequatur eum aspernatur cumque est error laboriosam et molestias<br></br>
-                    neque sed nobis quasi aut harum totam. Eum repellendus earum ut <br></br>
-                    voluptate neque est quam quos qui consequuntur omnis vel <br></br>
-                    praesentium aliquid ut necessitatibus galisum et voluptate . <br></br>
-                    Lorem ipsum dolor sit amet.<br></br> 
-                    Quo quis voluptatem sed
-                    consequatur officiis ut corporis rerum et accusantium <br></br>
-                    animi qui quisquam sequi qui aliquam dolorem. <br></br>
-                    Qui aspernatur error in mollitia libero sed perspiciatis <br></br>
-                    quam quo explicabo amet. Et corporis voluptas sed inventore <br></br>
-                    consequatur eum aspernatur cumque est error laboriosam et molestias<br></br>
-                    neque sed nobis quasi aut harum totam. Eum repellendus earum ut <br></br>
-                    voluptate neque est quam quos qui consequuntur omnis vel <br></br>
-                    praesentium aliquid ut necessitatibus galisum et voluptate .
+                    O projeto Juntos nasceu com um grupo de estudantes, quando em meados de 2021 <br></br>
+                    identificaram uma demanda crescente entre populações carentes e em condição de  <br></br>
+                    vulnerabilidade que necessitavam de ajuda para receber doações,<br></br>
+                    como alimentos e roupas. <br></br>
+                    A iniciativa conta com dezenas de voluntários, entre doadores e colaboradores, <br></br>
+                    que fazem a separação e distribuição dos donativos.<br></br>
+                    O projeto possui também apoio de ONGs parceiras para <br></br>
+                    fazer a coleta de doações e atender um maior número de beneficiários.<br></br>
+                    Fazemos também todo o controle de entrada e saída <br></br>
+                    relacionado a distribuição de donativos.<br></br> 
+                    Devido ao atual cenário econômico do nosso país,
+                    a demanda por beneficiário vem <br></br>
+                    aumentando consideravelmente, e com isso,  <br></br>
+                    precisamos da sua ajuda para reduzir cada vez  <br></br>
+                    mais o impacto nas famílias carentes e transformar a realidade destas pessoas. <br></br>
                     </p>
                     <div className={style.ftQuemSomos1}>
                         <img src={ftQuemSomos2}></img>
