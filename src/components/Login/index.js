@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import juntos_logo from '../../img/juntos_logo.png';
+import juntos_logo_new from '../../img/juntos_logo_new.png';
 import style from '../../css/loginStyle.module.css';
 import authService from "../../services/auth.service";
 import { Navigate } from "react-router-dom";
@@ -50,7 +50,7 @@ class Login extends React.Component{
               <span className={style.loginFormTitle}> Bem vindo </span>
 
               <span className={style.loginFormTitle}>
-                <img src={juntos_logo} alt="Juntos Logo" />
+                <img src={juntos_logo_new} alt="Juntos Logo" />
               </span>
 
               <div className={style.wrapInput}>
