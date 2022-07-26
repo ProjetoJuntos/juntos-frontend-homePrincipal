@@ -23,15 +23,18 @@ class Login extends React.Component{
       password: this.state.password
     }
     console.log("data", data)
-    try {
-      let res = await authService.authenticate(data)
-      console.log("res", res.data)
-      authService.setLoggedUser(res.data)
-      this.setState({ redirectTo: "/" })
-    } catch (error) {
-      console.log("error", error)
-      alert("Email ou senha incorretos")
-    }
+    window.location.replace('https://juntos-srv.herokuapp.com/public/')
+    //this.setState({ redirectTo: "/public/" })
+
+    // try {
+    //   let res = await authService.authenticate(data)
+    //   console.log("res", res.data)
+    //   authService.setLoggedUser(res.data)
+    //   this.setState({ redirectTo: "/" })
+    // } catch (error) {
+    //   console.log("error", error)
+    //   alert("Email ou senha incorretos")
+    // }
   }
 
   render() {
